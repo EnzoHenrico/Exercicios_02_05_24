@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DuasPilhas
 {
-    internal class IntegerController
+    internal class IntController
     {
         int value;
-        IntegerController? previous;
+        IntController? previous;
 
-        public IntegerController(int value)
+        public IntController(int value)
         {
             this.value = value;
             this.previous = null;
@@ -22,19 +22,19 @@ namespace DuasPilhas
             return value.ToString();
         }
 
-        public void SetPrevious(IntegerController? previous)
+        public void SetPrevious(IntController? previous)
         {
             this.previous = previous;
         }
 
-        public IntegerController? GetPrevious()
+        public IntController? GetPrevious()
         {
             return this.previous;
         }
 
-        public void SetValue(int value)
+        public int GetValue()
         {
-            this.value = value;
+            return this.value;
         }
     }
 }

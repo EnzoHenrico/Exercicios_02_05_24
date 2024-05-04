@@ -71,12 +71,12 @@ namespace DuasPilhas
                 return 0;
             }
 
-            IntController temp = this.top;
+            IntController? temp = this.top;
             int acc = 0;
 
             while (temp != null)
             {
-                acc++;
+                acc += temp.GetValue();
                 temp = temp.GetPrevious();
             }
 
@@ -130,7 +130,7 @@ namespace DuasPilhas
             return minValue;
         }
 
-        public IntStack OnlyEvens(IntStack stack)
+        public IntStack OnlyOdds()
         {
             IntStack evensStack = new();
             IntController? temp = this.top;
@@ -149,7 +149,7 @@ namespace DuasPilhas
             return evensStack;
         }
 
-        public IntStack OnlyOdds(IntStack stack)
+        public IntStack OnlyEvens()
         {
             IntStack oddsStack = new();
             IntController? temp = this.top;
